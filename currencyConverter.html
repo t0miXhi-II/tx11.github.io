@@ -1,36 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<title>Apps by Tomi</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-    body,h1 {font-family: "Raleway"}
-    body, html {
-        height: 100%;
-    }
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Apps by Tomi</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Updated -->
+  <script src="scripts/currencyConverter.js"></script>
+  <link rel="stylesheet" href="css/myCSS.css">
+
+  <style>
     .bgimg {
-        background-image: url('images/map.jpg');
-        min-height: 100%;
-        background-position: center;
-        background-size: cover;
+      background-image: url('images/map.jpg');
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
     }
-</style>
+
+    .button {
+      background-color: #e45441;
+      color: white;
+      height: 50px;
+      width: 200px;
+      border-radius: 25px;
+    }
+    .button:hover {
+      background-color: gainsboro;
+      color: black;
+    }
+  </style>
+
 </head>
-<body>
 
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-        <div class="w3-display-topleft w3-padding-large w3-xlarge">
-            TX11 - Apps by T0mi
-        </div>
-        <div class="w3-display-middle" style="background-color: gainsboro; color: navy; padding: 2%; border-radius: 30%;">
-            <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-            <hr class="w3-border-grey" style="margin:auto;width:40%">
-        </div>
+<body style="background-image: url('images/map.jpg'); font-family: sans-serif, Segoe UI, Tahoma, Geneva, Verdana;">
+  <div>
+    <!-- header section strats -->
+    <header class="header_section">
+      
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                TX11 - Apps by T0mi
+              </span>
+            </a>
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#myProfile"> My Profile </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html#sampleApps"> Sample Apps </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#contactInfo"> Contact Info </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+  
+      
+    <div class="col-md-8 col-lg-6 mx-auto">
+      <div style="background-color: gainsboro; align-items: center; padding-left: 10%; padding-right: 10%; padding-top: 5%; padding-bottom: 5%; border-radius: 20px; margin-top: 30px;">
+                                
+        <center>
+          <h1> Currency Converter </h1>
+        
+          <h1 id="resultDisplay" class="resultDisplay"></h1>
+          <h2 id="rateDisplay"></h2>
+          <br>
+          <p> 
+            Convert: <input class="myTextInput" type="number" name="desiredAmount" id="desiredAmount" placeholder="0.00">
+          </p>
+        </center>
+
+        <div class="container-fluid" style="width: 100%;">
+          <center>
+          <select id="baseCurrency" class="mySelector" placeholder="Please Select your Base Currency">
+            <option value="GBP"> GBP - Great Britain Pound </option>
+            <option value="USD"> USD - US Dollar </option>
+            <option value="EUR"> EUR - Euro </option>
+            <option value="AUD" selected> AUD - Australian Dollar </option>
+            <option value="NZD"> NZD - New Zealand Dollar </option>
+            <option value="NGN"> NGN - Nigerian Naira </option>
+          </select>
+                  
+        <button id="exchange">
+          <i class="fas fa-exchange-alt"></i>
+          <img src="files/exchange.png" alt="" style="position: relative; height: 25px; width: 30px;">
+        </button>
+
+        <select id="desiredCurrency" class="mySelector" placeholder="Please Select your Desired Currency">
+          <option value="GBP" selected> GBP - Great Britain Pound </option>
+          <option value="USD"> USD - US Dollar </option>
+          <option value="EUR"> EUR - Euro </option>
+          <option value="AUD"> AUD - Australian Dollar </option>
+          <option value="NZD"> NZD - New Zealand Dollar </option>
+          <option value="NGN"> NGN - Nigerian Naira </option>
+        </select>
+        </center>
+        </div>
+        
+        <br>
+        <p> 
+          <center><input type="button" id="getRateButton" value="Get Rate"></center>
+        </p>
+                                
+        <br>
+              
+      </div>
+                
     </div>
+            
+    <!-- end slider section -->
+
+    <!-- end info_section -->
+
+  </div>
 
 </body>
+
 </html>

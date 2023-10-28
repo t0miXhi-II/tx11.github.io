@@ -49,7 +49,7 @@
 
 </head>
 
-<body>
+<body style="font-family: sans-serif, Segoe UI, Tahoma, Geneva, Verdana;">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -237,7 +237,7 @@
                 </div>
               </div>
 
-              <a href="files/Tomi Shittu CV - SftEngr - 2023.docx" download><button class="w3-button w3-deep-orange w3-padding-large w3-section">
+              <a href="files/7omi - dev - CV 2023.pdf" download><button class="w3-button w3-deep-orange w3-padding-large w3-section">
                 <i class="fa fa-download"></i> Download Resume
               </button></a>
           
@@ -255,11 +255,13 @@
   <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
 
     <p style="color: black;">Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message" style="height: 100px;"></p>
+    <!-- <form action="/action_page.php" target="_blank"> -->
+      
+    <form action="scripts/action_page.php" method="post">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="message" style="height: 100px;"></p>
       <p>
         <button class="w3-button w3-deep-orange w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
@@ -267,19 +269,10 @@
       </p>
     </form>
 
+
     <!-- Image of location/map -->
     <img src="images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
      
-    <!-- 
-    <h2>Contact Me</h2>
-    <hr class="w3-opacity">
-  
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-    </div>
-    -->
 
   </div>
   <!-- End Contact Section -->
