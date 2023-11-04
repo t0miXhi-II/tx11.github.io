@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <script src="scripts/emailJS.js"></script>
+
   <style>
     .myTexts {
       color: grey;
@@ -171,7 +173,6 @@
         
         </a>
 
-
       </div>
     
     </div>
@@ -255,20 +256,16 @@
   <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
 
     <p style="color: black;">Lets get in touch. Send me a message:</p>
-    <!-- <form action="/action_page.php" target="_blank"> -->
-      
-    <form action="scripts/action_page.php" method="post">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="message" style="height: 100px;"></p>
+
+      <p><input id="name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="name"></p>
+      <p><input id="email" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="email"></p>
+      <p><input id="subject" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="subject"></p>
+      <p><input id="message" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="message" style="height: 100px;"></p>
       <p>
-        <button class="w3-button w3-deep-orange w3-padding-large" type="submit">
+        <button id="emailSendButton" class="w3-button w3-deep-orange w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
-    </form>
-
 
     <!-- Image of location/map -->
     <img src="images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
@@ -384,6 +381,15 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
 
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("86QCkJUES2EkHiKwR");
+   })();
+  </script>
 
 </body>
 
