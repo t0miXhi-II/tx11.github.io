@@ -1,3 +1,4 @@
+// This Email Function uses EmailJS API -->> https://dashboard.emailjs.com/
 
 document.addEventListener("DOMContentLoaded", function () {
          
