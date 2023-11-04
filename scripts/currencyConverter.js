@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //console.log(my_data.result);
             let exchange_rate = my_data.info.quote.toFixed(4);
             let exchange_result = my_data.result.toFixed(2);
-            document.querySelector("#resultDisplay").innerHTML = `New Amount: ${exchange_result}${to}`;
+            document.querySelector("#resultDisplay").innerHTML = `${exchange_result} ${to}`;
             document.querySelector("#rateDisplay").innerHTML = `Exchange rate: 1${from} to ${exchange_rate}${to}`;
         })
         .catch(error => {
